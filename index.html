@@ -1,0 +1,56 @@
+Great! You're on the right screen to create your index.html file.
+
+Here's what to do:
+
+1. In the box that says “Name your file…”, type:
+
+index.html
+
+
+2. In the text editor area (where it says "Enter file contents here"), paste this full code:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Tracker</title>
+</head>
+<body>
+    <h2>Click below to get your location:</h2>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="locationResult"></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("locationResult").innerText = "Geolocation not supported.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("locationResult").innerText =
+                "Latitude: " + position.coords.latitude +
+                ", Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            document.getElementById("locationResult").innerText = "Error getting location.";
+        }
+    </script>
+</body>
+</html>
+
+3. Scroll down and click the green “Commit changes…” button.
+
+
+
+
+---
+
+After this, let me know and I’ll walk you through turning this into a live website using GitHub Pages. Ready?
+
